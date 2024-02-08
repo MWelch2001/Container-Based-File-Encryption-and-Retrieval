@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxapplication1.TerminalController">
+   <children>
+      <GridPane prefHeight="800.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="300.0" text="Terminal" translateX="80.0" translateY="20.0" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="44.0" />
+               </font>
+            </Label>
+            <TextField fx:id="commandInputField" prefWidth="600.0" GridPane.columnSpan="2" GridPane.valignment="BOTTOM" />
+            <Button fx:id="runCommandBtn" mnemonicParsing="false" onAction="#RunCommand" prefWidth="300.0" text="Run Command" translateY="24.0" GridPane.rowIndex="1" />
+            <TextArea fx:id="terminalOutput" prefHeight="100.0" prefWidth="600.0" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+            <TextField fx:id="paramInputField" prefWidth="600.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label text="Command" translateX="5.0" translateY="-25.0" GridPane.valignment="BOTTOM" />
+            <Label text="Parameters" translateX="5.0" translateY="-25.0" GridPane.rowIndex="1" />
+            <Button fx:id="mainMenuBtn" mnemonicParsing="false" onAction="#GoToMainMenu" text="Back to Main Menu" translateX="10.0" translateY="10.0" GridPane.valignment="TOP" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>
